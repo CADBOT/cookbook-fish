@@ -37,8 +37,8 @@ Optional custom fish functions
 
 1. Include the recipe `fish::functions`
 2. Specify any users that you want the functions to be installed for in attribute
-3. default['fish']['functions']['install_for_users'] = ['joe','blow','chuck']
-3. Copy your custom .fish files under files/default/functions in this recipe. Voilà.
+   `default['fish']['functions']['install_for_users'] = ['joe','blow','chuck']`
+3. Copy your custom `.fish` files to `files/default/functions` in this cookbook. Voilà.
 
 
 Optional oh-my-fish Installation
