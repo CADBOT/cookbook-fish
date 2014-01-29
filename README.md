@@ -1,7 +1,6 @@
 fish Cookbook
 =============
 Installs/configure fish shell
-NOTE: Will not improve your cooking skills on either Actinopterygii or Crustacea.
 
 http://fishshell.com/
 
