@@ -14,6 +14,8 @@ Attributes
 ----------
 
 - default['fish']['install_method'] - install method, default: "package"
+
+Optional attributes, when using 'source' install method:
 - default['fish']['src_dir'] - src directory, default: "/usr/src"
 - default['fish']['release'] - release version, default: "2.1.0"
 
