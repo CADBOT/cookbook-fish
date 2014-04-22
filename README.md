@@ -18,6 +18,8 @@ Attributes
 Optional attributes, when using 'source' install method:
 - default['fish']['src_dir'] - src directory, default: "/usr/src"
 - default['fish']['release'] - release version, default: "2.1.0"
+- default['fish']['set_as_default'] - set fish as the default shell for the specified user, default: false
+- default['fish']['user'] - the user who will have their default shell changed to fish, default: "vagrant"
 
 Usage
 -----
