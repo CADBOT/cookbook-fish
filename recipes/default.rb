@@ -58,7 +58,7 @@ end
 
 if node['fish']['set_as_default']
   bash "Set as default" do 
-  	code "chsh -s /usr/local/bin/fish vagrant"
-    not_if "grep vagrant /etc/passwd | grep -q \/usr\/local\/bin\/fish"
+  	code "chsh -s /usr/local/bin/fish #{node['fish']['user']}"
+    not_if "grep #{node['fish']['user']} /etc/passwd | grep -q \/usr\/local\/bin\/fish"
   end
 end
