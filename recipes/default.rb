@@ -49,14 +49,14 @@ when "source"
     not_if "fish --version 2>&1 | grep -q #{node['fish']['release']}"
   end
 
+  bash "Enable fish as login shell" do
+  	code "echo /usr/local/bin/fish >>/etc/shells"
+  	not_if "grep -q /usr/local/bin/fish /etc/shells"
+  end
+
 end
 
 if node['fish']['set_as_default']
-  bash "Enable fish as login shell" do
-  	code "echo /usr/local/bin/fish >>/etc/shells"
-  	not_if "grep -q fish /etc/shells"
-  end
-
   bash "Set as default" do 
   	code "chsh -s /usr/local/bin/fish vagrant"
     not_if "grep vagrant /etc/passwd | grep -q \/usr\/local\/bin\/fish"
